@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body,
+      h3,
+      p,
+      form {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        border: 5px solid black;
+      }
+      h2 span {
+        font-size: 2em;
+        color: yellow;
+      }
+      label {
+        font-size: 14px;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      /* input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      } */
+
+      .submit {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        height: 2.5rem;
+        width: 100px;
+        color: white;
+        border-radius: 12px;
+      }
+
+      .submit:hover {
+        background-color: #45a049;
+      }
+      a {
+        text-decoration: none;
+      }
+      .containerrr,
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+        margin-bottom: 10px;
+      }
+      /* From Uiverse.io by Yaseen549 */
+      .input {
+        border: 2px solid #e8e8e8;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        font-size: small;
+        font-weight: bold;
+        text-align: center;
+        width:90%;
+      }
+
+      .input:focus {
+        outline-color: white;
+        background-color: #ffffff;
+        color: #e8e8e8;
+        box-shadow: 5px 5px #888888;
+      }
+      .containerr {
+        margin-bottom: 15px;
+      }
+      .pass{
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div align="center">
+        <h2><span>UI</span>verse</h2>
+        <h4>Welcome to UIverse</h4>
+        <p>Sign in to UIverse and ignite your learning and placement journey</p>
+      </div>
+
+      <form action="" method="post">
+        <div class="containerr">
+          <label for="user-id">Enter User ID:</label>
+          <!-- From Uiverse.io by Yaseen549 -->
+
+          <input
+            type="text"
+            name="text"
+            class="input"
+            placeholder="Enter your Name"
+          />
+<div class="pass">
+          <label for="password">Enter Password:</label>
+          <!-- From Uiverse.io by Yaseen549 -->
+
+          <input
+            type="password"
+            name="text"
+            class="input"
+            placeholder="Enter your password!"
+          />
+        </div></div>
+        <div class="containerrr">
+          <button type="submit" value="login" class="submit">Login</button>
+        </div>
+      </form>
+      <script>
+        const submit = document.querySelector(".submit");
+        const input_text = document.querySelector("#user-id");
+        const input_pass = document.querySelector("#password");
+
+        submit.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (input_text.value !== "Ajay") {
+            return alert("invalid user");
+          } else if (input_pass.value !== "Ajay@123") {
+            return alert("wrong password");
+          } else {
+            window.location.href = "https://uiverse.io/";
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>
